@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:5000/api/health)",
+      "Bash(dotnet run:*)",
+      "Bash(netstat -ano)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000/index.html)",
+      "Bash(curl -s http://127.0.0.1:5000/)",
+      "Bash(curl -v http://127.0.0.1:5000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:5000/index.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:5000/)",
+      "Bash(curl -s http://127.0.0.1:5000/api/snapshot)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f''''Databases: {len\\(d[\"\"databases\"\"]\\)}''''\\); [print\\(f''''  {db[\"\"name\"\"]}: {len\\(db[\"\"stations\"\"]\\)} stations, first={db[\"\"stations\"\"][0][\"\"name\"\"]}''''\\) for db in d[''''databases'''']]\")",
+      "Bash(curl -s http://127.0.0.1:5000/api/health)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f''''Showing: {len\\(d[\"\"databases\"\"]\\)} databases''''\\); [print\\(f''''  {db[\"\"name\"\"]}''''\\) for db in d[''''databases'''']]\")",
+      "Bash(python -c \":*)"
+    ],
+    "additionalDirectories": [
+      "e:\\SqlMetro\\SqlMetro"
+    ]
+  }
+}
